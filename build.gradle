@@ -6,7 +6,7 @@ plugins {
 
 group = 'com.j0.book'
 version = '1.0-SNAPSHOT' + new Date().format("yyyyMMddHHmmss")
-sourceCompatibility=1.8
+sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
@@ -36,5 +36,9 @@ dependencies {
 
     //devtools
     compileOnly("org.springframework.boot:spring-boot-devtools")
+
+    implementation('org.springframework.boot:spring-boot-starter-oauth2-client')
+    implementation('org.springframework.session:spring-session-jdbc')
+    testImplementation("org.springframework.security:spring-security-test")
 }
 
